@@ -11,7 +11,10 @@
 
 //=====[Declaration and initialization of public global objects]===============
 
-AnalogIn potentiometer(A0);
+AnalogIn potentiometer1(A0);
+AnalogIn potentiometer2(A1);
+AnalogIn potentiometer3(A2);
+
 
 //=====[Declaration of external public global variables]=======================
 
@@ -27,9 +30,19 @@ void lightLevelControlInit() { }
 
 void lightLevelControlUpdate() { }
 
-float lightLevelControlRead()
+float lightLevelControlRead1()
 {
-    return potentiometer.read();
+    return potentiometer1.read();
+}
+
+float lightLevelControlRead2()
+{
+    return potentiometer2.read();
+}
+
+float lightLevelControlRead3()
+{
+    return potentiometer3.read();
 }
 
 //=====[Implementations of private functions]==================================
